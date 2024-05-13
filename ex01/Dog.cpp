@@ -6,7 +6,7 @@
 /*   By: rfinneru <rfinneru@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/01 16:59:38 by rfinneru      #+#    #+#                 */
-/*   Updated: 2024/05/13 14:29:48 by rfinneru      ########   odam.nl         */
+/*   Updated: 2024/05/13 15:15:37 by rfinneru      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void Dog::makeSound(void) const
 Dog::Dog(void) : Animal("Dog")
 {
     std::cout << GREEN "Dog constructor called!" RESET << std::endl;
+    this->brain = new Brain();   
 }
 
 Dog::Dog(const Dog &other)
@@ -35,6 +36,7 @@ Dog &Dog::operator=(const Dog &other)
 	if (this != &other)
 	{
 		this->type = other.type;
+        this->brain = other.brain;
 	}
 	return (*this);
 }
@@ -42,4 +44,5 @@ Dog &Dog::operator=(const Dog &other)
 Dog::~Dog()
 {
     std::cout << GREEN "Dog destructor called!" RESET << std::endl;
+    delete this->brain;
 }

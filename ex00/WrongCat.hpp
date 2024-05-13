@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Cat.hpp                                            :+:    :+:            */
+/*   WrongWrongCat.hpp                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rfinneru <rfinneru@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/01 16:59:36 by rfinneru      #+#    #+#                 */
-/*   Updated: 2024/05/13 14:24:38 by rfinneru      ########   odam.nl         */
+/*   Updated: 2024/05/13 14:34:41 by rfinneru      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-class Cat : public Animal
+class WrongCat : public WrongAnimal
 {
   public:
-	Cat(void);
-	Cat(const Cat &other);
-	Cat &operator=(const Cat &copy);
-	~Cat();
+	WrongCat(void);
+	WrongCat(const WrongCat &other);
+	WrongCat &operator=(const WrongCat &copy);
+	~WrongCat();
 
 	void makeSound(void) const;
 };

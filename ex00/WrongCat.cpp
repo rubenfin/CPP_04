@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Cat.cpp                                            :+:    :+:            */
+/*   WrongCat.cpp                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rfinneru <rfinneru@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/01 16:59:31 by rfinneru      #+#    #+#                 */
-/*   Updated: 2024/05/13 14:26:04 by rfinneru      ########   odam.nl         */
+/*   Updated: 2024/05/13 14:37:48 by rfinneru      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-void Cat::makeSound(void) const
+void WrongCat::makeSound(void) const
 {
-    std::cout << BLUE "meow meow!" RESET << std::endl;
+    std::cout << PINK "boo boo!" RESET << std::endl;
 }
 
-Cat::Cat(void) : Animal("Cat")
+WrongCat::WrongCat(void) : WrongAnimal("WrongCat")
 {
-    std::cout << BLUE "Cat constructor called!" RESET << std::endl;
+    std::cout << PINK "WrongCat constructor called!" RESET << std::endl;
 }
 
-Cat::Cat(const Cat &other)
+WrongCat::WrongCat(const WrongCat &other)
 {
-    std::cout << BLUE "Cat copy constructor called!" RESET << std::endl;
+    std::cout << PINK "WrongCat copy constructor called!" RESET << std::endl;
     *this = other;
 }
 
-Cat &Cat::operator=(const Cat &other)
+WrongCat &WrongCat::operator=(const WrongCat &other)
 {
-    std::cout << BLUE "Cat copy assignment operator called!" RESET << std::endl;
+    std::cout << PINK "WrongCat copy assignment operator called!" RESET << std::endl;
 	if (this != &other)
 	{
 		this->type = other.type;
@@ -38,7 +38,7 @@ Cat &Cat::operator=(const Cat &other)
 	return (*this);
 }
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
-    std::cout << BLUE "Cat destructor called!" RESET << std::endl;
+    std::cout << PINK "WrongCat destructor called!" RESET << std::endl;
 }

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Animal.hpp                                         :+:    :+:            */
+/*   WrongAnimal.hpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rfinneru <rfinneru@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
@@ -22,17 +22,17 @@
 # define PINK "\033[95m"
 # define RESET "\033[0m"
 
-class Animal
+class WrongAnimal
 {
   protected:
 	std::string type;
 
   public:
-    Animal(void); 
-	Animal(std::string type);
-	Animal(const Animal &other);
-	Animal &operator=(const Animal &other);
-    virtual ~Animal();
+    WrongAnimal(void); 
+	WrongAnimal(std::string type);
+	WrongAnimal(const WrongAnimal &other);
+	WrongAnimal &operator=(const WrongAnimal &other);
+    virtual ~WrongAnimal();
 
     virtual void makeSound(void) const;
     std::string getType(void) const;

@@ -6,7 +6,7 @@
 /*   By: rfinneru <rfinneru@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/01 16:59:41 by rfinneru      #+#    #+#                 */
-/*   Updated: 2024/05/02 14:53:50 by rfinneru      ########   odam.nl         */
+/*   Updated: 2024/05/13 13:38:40 by rfinneru      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ class Dog : public Animal
 {
   public:
 	Dog(void);
+	Dog(const Dog &other);
 	Dog &operator=(const Dog &copy);
 	~Dog();
+
+	void makeSound(void) const;
 };

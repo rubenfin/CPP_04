@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Cat.hpp                                            :+:    :+:            */
+/*   main.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rfinneru <rfinneru@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2024/05/01 16:59:36 by rfinneru      #+#    #+#                 */
-/*   Updated: 2024/05/13 14:24:38 by rfinneru      ########   odam.nl         */
+/*   Created: 2024/05/01 16:46:31 by rfinneru      #+#    #+#                 */
+/*   Updated: 2024/05/13 16:46:23 by rfinneru      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Cat.hpp"
+#include "Dog.hpp"
 
-#include "Animal.hpp"
-
-class Cat : public Animal
+int	main(void)
 {
-  public:
-	Cat(void);
-	Cat(const Cat &other);
-	Cat &operator=(const Cat &copy);
-	~Cat();
+	Animal *array[10];
 
-	void makeSound(void) const;
-};
+	for (int i = 0; i < 5; ++i)
+		array[i] = new Dog();
+	for (int i = 5; i < 10; ++i)
+		array[i] = new Cat();
+
+	for (int i = 0; i < 10; ++i)
+		delete array[i];
+
+	return (0);
+}
