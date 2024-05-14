@@ -6,7 +6,7 @@
 /*   By: rfinneru <rfinneru@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/01 16:59:31 by rfinneru      #+#    #+#                 */
-/*   Updated: 2024/05/14 11:42:14 by rfinneru      ########   odam.nl         */
+/*   Updated: 2024/05/14 11:50:25 by rfinneru      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void Cat::makeSound(void) const
 	std::cout << BLUE "meow meow!" RESET << std::endl;
 }
 
-Cat::Cat(void) : Animal("Cat")
+Cat::Cat(void) : AAnimal("Cat")
 {
 	std::cout << BLUE "Cat constructor called!" RESET << std::endl;
 	this->brain = new Brain();
