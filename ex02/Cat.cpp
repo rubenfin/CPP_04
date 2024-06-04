@@ -6,7 +6,7 @@
 /*   By: rfinneru <rfinneru@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/01 16:59:31 by rfinneru      #+#    #+#                 */
-/*   Updated: 2024/05/14 11:50:25 by rfinneru      ########   odam.nl         */
+/*   Updated: 2024/05/31 13:27:30 by rfinneru      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ Cat::Cat(void) : AAnimal("Cat")
 Cat::Cat(const Cat &other)
 {
 	std::cout << BLUE "Cat copy constructor called!" RESET << std::endl;
-	*this = other;
+	this->type = other.type;
+	this->brain = new Brain(*other.brain);
 }
 
 Cat &Cat::operator=(const Cat &other)
@@ -35,7 +36,8 @@ Cat &Cat::operator=(const Cat &other)
 	if (this != &other)
 	{
 		this->type = other.type;
-		this->brain = other.brain;
+		delete this->brain;
+		this->brain = new Brain(*other.brain);
 	}
 	return (*this);
 }
